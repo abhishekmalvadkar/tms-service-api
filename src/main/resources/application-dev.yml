@@ -1,0 +1,9 @@
+logging:
+  level:
+    'com.amalvadkar.tms' : debug
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

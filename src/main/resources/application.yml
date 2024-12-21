@@ -1,0 +1,24 @@
+spring:
+    application:
+        name: tms-service-api
+    jpa:
+        open-in-view: false
+    datasource:
+        url: jdbc:mysql://${DB_HOST:127.0.0.1}:${DB_PORT:3306}/tms-service-api
+        username: ${DB_USER:root}
+        password: ${DB_PWD:root}
+    liquibase:
+        change-log: classpath:/db/changelog/changelog-master.xml
+        enabled: true
+
+server:
+    port: 9091
+
+eureka:
+    instance:
+        preferIpAddress: true
+    client:
+        registerWithEureka: true
+        fetchRegistry: true
+        serviceUrl:
+            defaultZone: ${EUREKA_SERVER_URL:http://localhost:8761}/eureka/

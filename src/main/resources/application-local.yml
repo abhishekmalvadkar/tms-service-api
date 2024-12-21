@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        generate_statistics: true
+        format_sql: true
+
+logging:
+  level:
+    'com.amalvadkar.tms' : debug
+    'org.hibernate.stat' : debug
+    'org.hibernate.SQL' : debug
+    'org.hibernate.orm.jdbc.bind' : trace
